@@ -71,6 +71,13 @@ h1 {
   margin-top: 5%;
   margin-left: 0px;
 }
+.headerDx {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
 main {
   border-bottom: solid 1px lightgrey;
 }
@@ -81,10 +88,32 @@ section {
   margin-right: 10%;
   margin-bottom: 5%;
 }
+section article {
+}
+section article {
+  display: flex;
+  width: 30%;
+}
+section article .numero {
+  margin-right: 10px;
+  margin-top: -10px;
+  opacity: 0.1;
+  font-weight: 700;
+  font-size: xx-large;
+}
+section article .nome {
+  margin-top: 10px;
+  display: flex;
+}
 
-article span {
+section article .nome img {
+  height: 20px;
+}
+
+section article .nome span {
   color: grey;
 }
+
 /* articoli */
 
 section .articoliUno {
@@ -92,9 +121,7 @@ section .articoliUno {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-section .articoliUno article {
-  width: 30%;
-}
+
 section h3 {
   margin-left: 2.5%;
 }
