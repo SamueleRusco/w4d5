@@ -3,6 +3,7 @@
 body {
   font-family: "Roboto", sans-serif;
   letter-spacing: -1px;
+  font-size: 2em;
 }
 nav {
   background-color: #ffc017;
@@ -16,7 +17,7 @@ nav {
   font-size: 70%;
 }
 nav img {
-  height: 40%;
+  height: 60%;
   margin-left: 5%;
 }
 nav div {
@@ -32,7 +33,7 @@ nav div ul li {
   list-style: none;
 }
 nav div button {
-  font-size: 70%;
+  font-size: 50%;
   padding: 7px;
 }
 
@@ -49,6 +50,7 @@ header {
   border-bottom: solid 1px grey;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 h1 {
@@ -66,62 +68,121 @@ h1 {
 }
 
 .headerSx button {
-  font-size: 70%;
-  padding: 7px;
+  font-size: 50%;
+  height: 25px;
+  width: 130px;
   margin-top: 5%;
   margin-left: 0px;
-}
-.headerDx {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
 }
 
 main {
   border-bottom: solid 1px lightgrey;
 }
-section {
+.primaSezione .articoliUno {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.primaSezione h3 {
+  margin-left: 2.5%;
+}
+
+.primaSezione {
   width: 80%;
   margin-top: 5%;
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 5%;
+  border-bottom: solid 1px lightgrey;
+  font-size: 0.6em;
 }
-section article {
-}
-section article {
+
+.primaSezione article {
   display: flex;
   width: 30%;
 }
-section article .numero {
+.primaSezione article .numero {
   margin-right: 10px;
   margin-top: -10px;
   opacity: 0.1;
   font-weight: 700;
   font-size: xx-large;
 }
-section article .nome {
+.primaSezione article .nome {
   margin-top: 10px;
   display: flex;
 }
-
-section article .nome img {
-  height: 20px;
+.primaSezione article .titolo {
+  font-weight: 700;
+}
+.primaSezione article .data {
+  color: lightslategray;
+}
+.primaSezione article .nome img {
+  height: 40px;
+  margin-right: 15px;
+}
+.primaSezione article:first-child .nome img {
+  border-radius: 50%;
+}
+.primaSezione article:nth-child(3) .nome img,
+article:nth-child(4) .nome img,
+article:nth-child(5) .nome img,
+article:nth-child(6) .nome img {
+  border-radius: 25%;
 }
 
-section article .nome span {
+.primaSezione article .nome span {
   color: grey;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.secondaSezione {
+  width: 50%;
+}
+.secondaSezione article {
+  display: flex;
+  width: 100%;
+  margin-left: 10%;
+  margin-bottom: 60px;
+}
+.secondaSezione article .articoloGrande {
+  width: 60%;
+}
+.secondaSezione article .fotoArticolo {
+  width: 40%;
+}
+.secondaSezione article .fotoArticolo img {
+  width: 60%;
+}
+
+.secondaSezione article .nome {
+  font-size: ;
+  margin-top: 10px;
+  display: flex;
+}
+.secondaSezione article .titolo {
+  font-weight: 700;
+}
+.secondaSezione article .metaTesto {
+  font-size: 0.8em;
+  color: grey;
+  width: 100%;
+}
+.secondaSezione article .data {
+  color: lightslategray;
+  font-size: 0.5em;
+}
+.secondaSezione article .nome img {
+  height: 40px;
+  margin-right: 15px;
+}
+
+.secondaSezione article .nome span {
+  color: grey;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 /* articoli */
-
-section .articoliUno {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-section h3 {
-  margin-left: 2.5%;
-}
