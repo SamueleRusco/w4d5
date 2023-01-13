@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Spectral:wght@500&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -1px;
+}
+nav {
+  background-color: #ffc017;
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom: solid 1px black;
+  line-height: 1.5em;
+  height: 40px;
+  align-items: center;
+  font-size: 70%;
+}
+nav img {
+  height: 40%;
+  margin-left: 5%;
+}
+nav div {
+  display: flex;
+  align-items: baseline;
+  margin-right: 5%;
+}
+nav div ul {
+  display: flex;
+}
+nav div ul li {
+  margin-left: 13px;
+  list-style: none;
+}
+nav div button {
+  font-size: 70%;
+  padding: 7px;
+}
+
+button {
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  margin-left: 20px;
+  border: none;
+}
+
+header {
+  background-color: #ffc017;
+  border-bottom: solid 1px grey;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-family: "Spectral", serif;
+  font-size: 55px;
+  font-weight: 500;
+  margin-bottom: 5%;
+}
+
+.headerSx {
+  line-height: 1;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+
+.headerSx button {
+  font-size: 70%;
+  padding: 7px;
+  margin-top: 5%;
+  margin-left: 0px;
+}
