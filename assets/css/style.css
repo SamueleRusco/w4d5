@@ -5,19 +5,25 @@ body {
   letter-spacing: -1px;
   font-size: 2em;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 nav {
+  position: sticky;
+  top: 0;
   background-color: #ffc017;
   display: flex;
   justify-content: space-between;
 
   border-bottom: solid 1px black;
   line-height: 1.5em;
-  height: 40px;
+  height: 100px;
   align-items: center;
   font-size: 70%;
+  width: 100%;
 }
 nav img {
-  height: 60%;
+  height: 30%;
   margin-left: 5%;
 }
 nav div {
@@ -33,16 +39,17 @@ nav div ul li {
   list-style: none;
 }
 nav div button {
-  font-size: 50%;
-  padding: 7px;
+  font-size: 0.8em;
 }
 
 button {
   color: white;
   background-color: black;
-  border-radius: 15px;
+  border-radius: 30px;
   margin-left: 20px;
   border: none;
+  height: 50px;
+  width: 130px;
 }
 
 header {
@@ -51,11 +58,12 @@ header {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+  width: 100%;
 }
 
 h1 {
   font-family: "Spectral", serif;
-  font-size: 55px;
+  font-size: 80px;
   font-weight: 500;
   margin-bottom: 5%;
 }
@@ -68,11 +76,11 @@ h1 {
 }
 
 .headerSx button {
-  font-size: 50%;
-  height: 25px;
-  width: 130px;
+  height: 40px;
+  width: 200px;
   margin-top: 5%;
   margin-left: 0px;
+  font-size: 0.6em;
 }
 
 main {
@@ -89,23 +97,24 @@ main {
 }
 
 .primaSezione {
-  width: 80%;
-  margin-top: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 5%;
+  width: 100%;
+  padding-bottom: 50px;
   border-bottom: solid 1px lightgrey;
   font-size: 0.6em;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
 }
 
 .primaSezione article {
   display: flex;
   width: 30%;
+  margin: 30px;
 }
 .primaSezione article .numero {
   margin-right: 10px;
   margin-top: -10px;
-  opacity: 0.1;
+  color: rgb(224, 224, 224);
   font-weight: 700;
   font-size: xx-large;
 }
@@ -138,27 +147,35 @@ article:nth-child(6) .nome img {
   margin-left: 5px;
   margin-right: 5px;
 }
+.parteDue {
+  display: flex;
+  justify-content: space-around;
+}
 .secondaSezione {
-  width: 50%;
+  width: 60%;
 }
 .secondaSezione article {
   display: flex;
-  width: 100%;
-  margin-left: 10%;
-  margin-bottom: 60px;
+
+  justify-content: space-around;
+  margin-bottom: 50px;
 }
 .secondaSezione article .articoloGrande {
-  width: 60%;
+  display: FLEX;
+  flex-direction: column;
+  width: 100%;
 }
 .secondaSezione article .fotoArticolo {
-  width: 40%;
+  height: 100%;
+  margin-left: 5%;
 }
 .secondaSezione article .fotoArticolo img {
-  width: 60%;
+  height: 200px;
 }
 
 .secondaSezione article .nome {
-  font-size: ;
+  font-size: 0.7em;
+  font-weight: 600;
   margin-top: 10px;
   display: flex;
 }
@@ -168,8 +185,8 @@ article:nth-child(6) .nome img {
 .secondaSezione article .metaTesto {
   font-size: 0.8em;
   color: grey;
-  width: 100%;
 }
+
 .secondaSezione article .data {
   color: lightslategray;
   font-size: 0.5em;
@@ -185,4 +202,95 @@ article:nth-child(6) .nome img {
   margin-right: 5px;
 }
 
-/* articoli */
+.parteDue .scopri .argomenti,
+.footerBar {
+  list-style: none;
+}
+.parteDue .scopri {
+  width: 25%;
+}
+.parteDue .scopri .titoloArgomenti {
+  font-size: 0.5em;
+  font-weight: 700;
+}
+.parteDue .scopri .argomenti {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: solid 1px lightgray;
+  padding-bottom: 25px;
+}
+.parteDue .scopri .argomenti li {
+  border: solid 1px lightgray;
+  margin: 5px;
+  padding: 10px;
+  font-size: 0.5em;
+  color: gray;
+}
+.parteDue .scopri .footerBar {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.5em;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+.parteDue .scopri .footerBar li {
+  margin-right: 25px;
+  color: grey;
+}
+@media screen and (max-width: 1200px) {
+  .primaSezione article .data {
+    display: flex;
+    justify-content: space-between;
+  }
+  .primaSezione article .data img {
+    display: none;
+  }
+
+  .headerDx {
+    position: sticky;
+  }
+  .parteDue {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .secondaSezione {
+    width: 90%;
+  }
+  .parteDue .scopri {
+    width: 90%;
+  }
+  .parteDue .scopri .footerBar {
+    width: 100%;
+  }
+  .parteDue .scopri .argomenti {
+    margin-right: 15%;
+  }
+  .parteDue .scopri .argomenti li {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  nav div ul:nth-child(1) {
+    display: none;
+  }
+  nav div button {
+    display: none;
+  }
+  .primaSezione .articoliUno {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .primaSezione .articoliUno article {
+    width: 100%;
+  }
+  .secondaSezione article {
+    font-size: 0.5em;
+  }
+
+  .secondaSezione article .fotoArticolo img {
+    height: 50px;
+  }
+}
