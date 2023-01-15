@@ -20,7 +20,8 @@ nav {
   height: 100px;
   align-items: center;
   font-size: 70%;
-  width: 100%;
+  width: 100vw;
+  z-index: 5;
 }
 nav img {
   height: 30%;
@@ -58,7 +59,7 @@ header {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
 }
 
 h1 {
@@ -86,16 +87,6 @@ h1 {
 main {
   border-bottom: solid 1px lightgrey;
 }
-.primaSezione .articoliUno {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.primaSezione h3 {
-  margin-left: 2.5%;
-}
-
 .primaSezione {
   width: 100%;
   padding-bottom: 50px;
@@ -104,6 +95,15 @@ main {
   display: flex;
   flex-direction: column;
   margin: 50px;
+}
+.primaSezione .articoliUno {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.primaSezione h3 {
+  margin-left: 2.5%;
 }
 
 .primaSezione article {
@@ -156,7 +156,6 @@ article:nth-child(6) .nome img {
 }
 .secondaSezione article {
   display: flex;
-
   justify-content: space-around;
   margin-bottom: 50px;
 }
@@ -178,6 +177,7 @@ article:nth-child(6) .nome img {
   font-weight: 600;
   margin-top: 10px;
   display: flex;
+  align-items: center;
 }
 .secondaSezione article .titolo {
   font-weight: 700;
@@ -271,26 +271,60 @@ article:nth-child(6) .nome img {
   }
 }
 
-@media screen and (max-width: 400px) {
-  nav div ul:nth-child(1) {
+@media screen and (max-width: 500px) {
+  nav {
+    height: 60px;
+    justify-content: space-between;
+    font-size: 0.4em;
+  }
+  nav div ul li:nth-child(1),
+  li:nth-child(2),
+  li:nth-child(3) {
     display: none;
   }
+  nav img {
+    height: 30%;
+  }
   nav div button {
+    height: 35px;
+    width: 100px;
+  }
+  header {
+    align-items: center;
+    height: 300px;
+  }
+  .headerDx {
     display: none;
+  }
+  .headerSx h1 {
+    font-size: 1.8em;
+  }
+  .headerSx p {
+    font-size: 0.5em;
+  }
+  .headerSx .primaSezione {
+    margin: 20px;
   }
   .primaSezione .articoliUno {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 80%;
   }
   .primaSezione .articoliUno article {
     width: 100%;
   }
+  article {
+    font-size: 0.6em;
+  }
   .secondaSezione article {
     font-size: 0.5em;
   }
+  .secondaSezione article .articoloGrande .nome img {
+    scale: 0.5;
+  }
 
   .secondaSezione article .fotoArticolo img {
-    height: 50px;
+    height: 100px;
   }
 }
