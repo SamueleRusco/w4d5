@@ -4,6 +4,7 @@ body {
   font-family: "Roboto", sans-serif;
   letter-spacing: -1px;
   font-size: 2em;
+  width: 99vw;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -94,7 +95,6 @@ main {
   font-size: 0.6em;
   display: flex;
   flex-direction: column;
-  margin: 50px;
 }
 .primaSezione .articoliUno {
   display: flex;
@@ -190,6 +190,8 @@ article:nth-child(6) .nome img {
 .secondaSezione article .data {
   color: lightslategray;
   font-size: 0.5em;
+  display: flex;
+  justify-content: space-between;
 }
 .secondaSezione article .nome img {
   height: 40px;
@@ -200,6 +202,11 @@ article:nth-child(6) .nome img {
   color: grey;
   margin-left: 5px;
   margin-right: 5px;
+}
+.parteDue .secondaSezione .articoloGrande .data .bottoneGrigio {
+  background-color: rgb(241, 241, 241);
+  padding: 5px;
+  border-radius: 20px;
 }
 
 .parteDue .scopri .argomenti,
@@ -237,7 +244,13 @@ article:nth-child(6) .nome img {
   margin-right: 25px;
   color: grey;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
+  .primaSezione {
+    padding: 5%;
+  }
+  .primaSezione article {
+    margin-right: 10%;
+  }
   .primaSezione article .data {
     display: flex;
     justify-content: space-between;
@@ -245,7 +258,21 @@ article:nth-child(6) .nome img {
   .primaSezione article .data img {
     display: none;
   }
-
+  .primaSezione .articoliUno {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  nav div {
+    font-size: 0.7em;
+  }
+  nav div button {
+    height: 35px;
+    width: 100px;
+  }
+  .primaSezione {
+    margin: 0px;
+  }
   .headerDx {
     position: sticky;
   }
@@ -256,9 +283,19 @@ article:nth-child(6) .nome img {
   .secondaSezione {
     width: 90%;
   }
+  .parteDue .secondaSezione .articoloGrande .nome {
+    font-size: 0.6em;
+  }
+  .parteDue .secondaSezione .articoloGrande .titolo {
+    font-size: 0.6em;
+  }
+  .parteDue .secondaSezione .articoloGrande .metaTesto {
+    font-size: 0.5em;
+  }
   .parteDue .scopri {
     width: 90%;
   }
+
   .parteDue .scopri .footerBar {
     width: 100%;
   }
@@ -271,11 +308,11 @@ article:nth-child(6) .nome img {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   nav {
     height: 60px;
     justify-content: space-between;
-    font-size: 0.4em;
+    font-size: 0.6em;
   }
   nav div ul li:nth-child(1),
   li:nth-child(2),
@@ -293,6 +330,9 @@ article:nth-child(6) .nome img {
     align-items: center;
     height: 300px;
   }
+  .primaSezione {
+    margin: 0px;
+  }
   .headerDx {
     display: none;
   }
@@ -303,7 +343,7 @@ article:nth-child(6) .nome img {
     font-size: 0.5em;
   }
   .headerSx .primaSezione {
-    margin: 20px;
+    margin: 5%;
   }
   .primaSezione .articoliUno {
     display: flex;
