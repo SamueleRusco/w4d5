@@ -23,6 +23,7 @@ nav {
   font-size: 70%;
   width: 100vw;
   z-index: 5;
+  transition: 1s;
 }
 nav img {
   height: 30%;
@@ -52,6 +53,7 @@ button {
   border: none;
   height: 50px;
   width: 130px;
+  transition: 1s;
 }
 
 header {
@@ -368,3 +370,5 @@ article:nth-child(6) .nome img {
     height: 100px;
   }
 }
+
+/* animazioni */
